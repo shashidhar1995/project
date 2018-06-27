@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate?Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+	<class name="com.user.Product" table="Product">
+	<id name="prodId" column="prodId">
+		<generator class="increment" />     
+		         
+	</id>                                                              
+     
+	<property name="prodName" type="string"/>
+	<property name="prodPrice" type="int"/>
+	<property name="orderedDate" type="date"/>
+	            
+	       
+	</class>                                                                                
+</hibernate-mapping>                 

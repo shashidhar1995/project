@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping          
+  PUBLIC "-//Hibernate?Hibernate Mapping DTD//EN"        
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">   
+  
+<hibernate-mapping>
+<class name="com.user.UserParent" table="UserP">
+	<id name="id" column="userid">
+		<generator class="increment" />          
+	</id>                                                     
+    
+	<property name="name" type="string"/>
+	<list name="plist" cascade="all" lazy="extra">
+	<key column="fkid"/>
+	<list-index column="list_index" base="1"/>
+	<one-to-many class="com.user.Product"/>
+	</list>   
+	</class>  
+</hibernate-mapping>
